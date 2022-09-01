@@ -1,0 +1,17 @@
+table, th, td{
+    width: 50%;
+    border: 1px solid;
+    text-align: center;
+    
+}
+td{
+    height: 1em;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.blue{background-color: aqua;}
+.green{background-color: green;}
