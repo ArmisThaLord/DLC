@@ -1,3 +1,5 @@
+<?php include "scrape.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
