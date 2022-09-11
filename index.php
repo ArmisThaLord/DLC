@@ -1,5 +1,4 @@
-<?php include "scrape.php" ?>
-
+<?php include 'scraper.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +9,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="POST">
-        <input type="text">
-        <input type="button" value="Press">
+    <form action="scraper.php" method="POST">
+        <input type="text" name="tld">
+        <input type="button" value="Press" name="btn">
     </form>
-    <div class="domain"><?php echo($domain)?></div>
+    <div class="domain"><?php echo $node_arr[8];?></div>
     <div class="bar"><table>
         <tr>
             <th>Availability</th>
@@ -25,10 +24,10 @@
         </tr>
         <tr>
             <td></td>
-            <td class="green"></td>  
-            <td class="yellow"></td>
-            <td class="blue"></td>
-            <td class="red"></td>
+            <td class="green"><?php echo($txt)?></td>  
+            <td class="yellow"><?php echo $node_arr[8];?></td>
+            <td class="blue"><?php echo $node_arr[8];?></td>
+            <td class="red"><?php echo $node_arr[8];?></td>
         </tr>
     </table></div>
 </body>
