@@ -2,7 +2,7 @@
 <?php
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://who.is/whois/arminaszinkevicius.xyz");
+curl_setopt($ch, CURLOPT_URL, "https://who.is/whois/".$tld);
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
@@ -31,15 +31,34 @@ foreach($h2s as $h2){
     $title_text = $h2 -> textContent;
     $h2_arr[] = $title_text;
     echo $title_text . '</br>';
-}
-/*
-$info =$dom->getElementsByTagName('container');
+} ?> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="domain"><?php echo $node_arr[8];?></div>
+<div class="bar"><table>
+    <tr>
+        <th>Availability</th>
+        <th class="green">Active</th>//1yr
+        <th class="yellow">Expired</th>//0-45d
+        <th class="blue">Grace</th>//0-30d
+        <th class="red">Delete</th>//5d
+    </tr>
+    <tr>
+        <td></td>
+        <td class="green"><?php echo($txt)?></td>  
+        <td class="yellow"><?php echo $node_arr[8];?></td>
+        <td class="blue"><?php echo $node_arr[8];?></td>
+        <td class="red"><?php echo $node_arr[8];?></td>
+    </tr>
+</table></div>
+</body>
+</html>
 
-$informacija = $info->item(0);
-
-$duom = $informacija -> getElementsByTagName('col-md-8 queryResponseBodyValue');
-
-foreach($duom as $d){
-    echo $d->textContent.' TEST ' . $d->getAttribute('') . '</br';
-}*/
-?> 
