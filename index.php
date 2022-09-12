@@ -10,7 +10,7 @@
 <body>
     <div class="center full">
     <form action="scrape.php" method="POST">
-        <input type="text" name="tld" placeholder="Domain name">
+        <input type="text" name="domain" placeholder="Domain name" id="domain">
         <input type="reset" value="Reset" name="btn">
         <input type="submit" value="Press" name="btn">
     </form>

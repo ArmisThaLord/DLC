@@ -1,8 +1,10 @@
 
 <?php
+$name = $_POST['domain'] ?? '';
+$tld =  "https://who.is/whois/".$name;
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://who.is/whois/".$tld);
+curl_setopt($ch, CURLOPT_URL, $tld);
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
@@ -39,7 +41,7 @@ foreach($h2s as $h2){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>CHECK</title>
 </head>
 <body>
 <div class="domain"><?php echo $node_arr[8];?></div>
@@ -59,6 +61,9 @@ foreach($h2s as $h2){
         <td class="red"><?php echo $node_arr[8];?></td>
     </tr>
 </table></div>
+<div class="center"><?php echo ($tld);?>
+</div>
+
 </body>
 </html>
 
